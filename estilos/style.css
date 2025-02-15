@@ -1,0 +1,197 @@
+@charset "UTF-8";
+
+:root {
+    --cor-dark-01: #A1A69C;
+    --cor-dark-02: #6E7371;
+    --cor-dark-03: #343A40;
+    --cor-dark-04: #1A1E26;
+    --cor-dark-05: #08090D;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    background-color: var(--cor-dark-04);
+}
+
+/*Parte do menu*/
+
+header.container {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    background-color: var(--cor-dark-03);
+}
+
+div.logo > img {
+    width: 100px;
+    padding-top: 15px;
+    margin-left: 15px;
+}
+
+i#burguer {
+    display: block;
+    color: var(--cor02);
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+div.search > input[type="search"] {
+    width: 30vw;
+    height: 30px;
+    border: 1px solid var(--cor-dark-05);
+    border-radius: 5px;
+    padding-left: 5px;
+    background-color: var(--cor-dark-04);
+    color: var(--cor-dark-01);
+}
+
+div.search > label > i {   
+    font-size: 1em;
+    font-weight: bold;
+}
+div.menu {
+    display: none;
+    position: absolute;
+    top: 70px;
+    right: 10px;
+    background-color: var(--cor-dark-03);
+}
+div.menu > ul > li {
+   display: inline;
+   font-size: 1em;
+   font-weight: 500;
+   margin-top: 20px;
+   list-style-type: none;
+}
+
+div.menu > ul > li > a {
+    text-decoration: none;
+    background-color: var(--cor-dark-04);
+    color: var(--cor-dark-01);
+    padding: 7px;
+    border: 1px solid var(--cor-dark-05);
+    border-radius: 5px;
+}
+
+/*Parte do main*/
+
+main.container {
+    display: flex;
+    position: relative;
+    flex-flow: column nowrap;
+    width: 100%;
+    background-color: var(--cor-dark-04);
+}
+
+main.container > h1 {
+    color: var(--cor-dark-01);
+    text-align: center;
+    margin: 20px 0px;
+    font-variant: small-caps;
+}
+
+main.container > form.criar {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 20px;
+    color: var(--cor-dark-01);
+}
+
+main.container > form.criar > label {
+    font-weight: 500;
+    cursor: pointer;
+}
+
+main.container > form.criar > input[type="text"], main.container > form.criar > input[type="number"] {
+    width: 200px;
+    height: 30px;
+    border: 1px solid var(--cor-dark-05);
+    padding-left: 5px;
+    border-radius: 5px;
+    background-color: var(--cor-dark-02);
+    color: var(--cor-dark-05);
+    font-weight: bold;
+}
+
+main.container > form.criar > input[type="submit"] {
+    width: 50px;
+    border: 1px solid var(--cor-dark-03);
+    border-radius: 5px;
+    background-color: var(--cor-dark-02);
+    color: var(--cor-dark-05);
+    font-weight: 500;
+    font-variant: small-caps;
+        cursor: pointer;
+}
+
+main.container > form.chaveamento {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--cor-dark-01);
+    margin-top: 50px;
+    gap: 30px;
+}
+
+main.container h2 {
+    color: var(--cor-dark-01);
+    text-align: center;
+    margin-bottom: 20px;
+    font-variant: small-caps;
+}
+
+main.container h3 {
+    color: var(--cor-dark-01);
+    text-align: center;
+    font-variant: small-caps;
+}
+
+main.container  form.chaveamento  input[type="text"] {
+    width: 200px;
+    height: 30px;
+    border: 1px solid var(--cor-dark-05);
+    padding-left: 5px;
+    border-radius: 5px;
+    background-color: var(--cor-dark-02);
+    color: var(--cor-dark-05);
+    font-weight: bold;
+}
+
+main.container  form.chaveamento  input[type="text"]::placeholder {
+    color: var(--cor-dark-04);
+    font-weight: normal;
+}
+
+div.rodada1, div.rodada2, div.rodada3 {
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid var(--cor-dark-02);
+}
+
+footer {
+    text-align: center;
+    background-color: var(--cor-dark-02);
+    color: var(--cor-dark-05);
+    width: 100%;
+    margin-top: 53px;
+    padding: 5px;
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--cor-dark-05);
+    font-weight: 500;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: var(--cor-dark-04);
+    transition: .2s;
+}

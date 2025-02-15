@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VAVALOS.GG</title>
+    <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+    <link rel="stylesheet" href="estilos/reset.css">
+    <link rel="stylesheet" href="estilos/style.css">
+</head>
+<body>
+    <header class="container">
+        <div class="logo"><img src="imagens/vavalogg.png" alt="Logo do  site"></div>
+        <div class="search">
+            <input type="search" name="busca" id="ibusca" autocomplete="on" placeholder="Pesquisar..." maxlength="30">
+            <label for="ibusca"><i class="material-symbols-outlined">search</i></label>
+        </div>
+        <i id="burguer" class="material-symbols-outlined" onclick="clickMenu()">menu</i>
+        <div class="menu" id="menu">
+            <ul>
+                <li><a href="#">Criar</a></li>
+                <li><a href="#">Login</a></li>
+            </ul>
+        </div>
+    </header>
+    <main class="container">
+        <h1>Seus Torneios</h1>   
+        <form action="chaveamento.php" class="criar" method="post">
+            <label for="nome">Nome do torneio</label>
+            <input type="text" name="nome" id="nome" required>
+            <label for="participantes">Quantidade de participantes</label>
+            <input type="number" name="participantes" id="participantes" required>
+            <input type="submit" value="Criar"> 
+        </form>
+
+        <form action="chaveamento.php" class="chaveamento" method="post">
+            <div class="rodada1">
+                <h2>Primeira Rodada</h2>
+                <div>
+                    <h3>Jogo 01</h3>
+                    <input type="text" name="nchave1" id="chave1" placeholder="Jogador 1">
+                    <p>X</p>
+                    <input type="text" name="nchave1" id="chave1" placeholder="Jogador 2">
+                </div> <br>
+                <div>
+                    <h3>Jogo 02</h3>
+                    <input type="text" name="nchave1" id="chave1" placeholder="Jogador 3">
+                    <p>X</p>
+                    <input type="text" name="nchave1" id="chave1" placeholder="Jogador 4">
+                </div> <br>
+                <div>
+                    <h3>Jogo 03</h3>
+                    <input type="text" name="nchave1" id="chave1" placeholder="Jogador 5">
+                    <p>X</p>
+                    <input type="text" name="nchave1" id="chave1" placeholder="Jogador 6">
+                </div> <br>
+                <div>
+                    <h3>Jogo 04</h3>
+                    <input type="text" name="nchave1" id="chave1" placeholder="Jogador 7">
+                    <p>X</p>
+                    <input type="text" name="nchave1" id="chave1" placeholder="Jogador 8">
+                </div>
+            </div>
+            
+            <div class="rodada2">
+                <h2>Segunda Rodada</h2>
+                <div>
+                    <h3>Jogo 05</h3>
+                    <input type="text" name="nchave2" id="chave2" placeholder="Vencedor do jogo 01">
+                    <p>X</p>
+                    <input type="text" name="nchave2" id="chave2" placeholder="Vencedor do jogo 02">
+                </div> <br>
+                <div>
+                    <h3>Jogo 06</h3>
+                    <input type="text" name="nchave2" id="chave2" placeholder="Vencedor do jogo 03">
+                    <p>X</p>
+                    <input type="text" name="nchave2" id="chave2" placeholder="Vencedor do jogo 04">
+                </div>
+            </div>
+            
+            <div class="rodada3">
+                <h2>Rodada Final</h2>
+                <div>                    
+                    <input type="text" name="nchave3" id="chave3" placeholder="Vencedor do jogo 05">
+                    <p>X</p>
+                    <input type="text" name="nchave3" id="chave3" placeholder="Vencedor do jogo 06">
+                </div>
+            </div>
+        </form>
+    </main>
+
+    <footer>Desnvolvido por <a href="https://github.com/jailsonsilva98" target="_blank">Jailson Silva</a></footer>
+
+    <script>
+        function clickMenu() {
+            let menu = document.getElementById("menu");
+            if (menu.style.display == 'block') {
+                menu.style.display = 'none'
+            } else {
+                menu.style.display = "block"
+            }
+        }
+    </script>
+</body>
+</html>
